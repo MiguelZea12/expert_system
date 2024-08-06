@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cuestionario</h1>
+        <form method="POST">
+            <label for="weight">¿Cuál es tu peso actual?</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="exercise_hours">¿Cuántas horas haces ejercicio al día?</label>
+            <input type="text" id="exercise_hours" name="exercise_hours" required>
+
+            <label for="goal">¿Buscas resultados estéticos o de salud?</label>
+            <select id="goal" name="goal">
+                <option value="esteticos">Estéticos</option>
+                <option value="salud">Salud</option>
+            </select>
+
+            <label for="ideal_weight">¿Cuál sería tu peso ideal?</label>
+            <input type="text" id="ideal_weight" name="ideal_weight" required>
+
+            <label for="commitment">¿Estás dispuesto a comprometerte para conseguir tus objetivos?</label>
+            <select id="commitment" name="commitment">
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
